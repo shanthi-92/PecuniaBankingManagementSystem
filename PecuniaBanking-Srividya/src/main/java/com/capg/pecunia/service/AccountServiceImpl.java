@@ -21,9 +21,15 @@ public class AccountServiceImpl implements IAccountService {
 
 	@Override
 	public AccountBean update(AccountBean bean) {
-		// TODO Auto-generated method stub
+		
 		return accountDao.update(bean);
 	}
 
+	@Override
+	public void delete(long accNumber) {
+		
+		accountDao.delete(accNumber);
+		
+	}
 	
 }

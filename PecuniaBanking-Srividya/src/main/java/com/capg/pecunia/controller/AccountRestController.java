@@ -39,4 +39,13 @@ public class AccountRestController {
 		
 		return accountservice.update(bean);
 	}
+	
+    @GetMapping("/delete/{accNumber}")
+    public String delete(@PathVariable long accNumber) {
+    	
+     accountservice.delete(accNumber);
+     return "+accNumber deleted successfully";
+	
+    }
 }
+

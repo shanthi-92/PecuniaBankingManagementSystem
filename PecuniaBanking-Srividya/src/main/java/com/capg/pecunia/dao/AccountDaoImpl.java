@@ -27,4 +27,10 @@ public class AccountDaoImpl implements IAccountDao{
 		return em.merge(bean);	
 	}
 
+	@Override
+	public void delete(long accNumber) {
+		AccountBean accountbean = em.find(AccountBean.class, accNumber);
+	     em.remove(accountbean);
+	}
+
 }
