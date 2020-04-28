@@ -1,5 +1,7 @@
 package com.capg.pecunia.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,9 +16,9 @@ public class PassbookServiceImpl implements IPassbookService {
 	IPassbookDao dao;
 	
 	@Override
-	public PassbookBean createAccount(PassbookBean bean) {
+	public PassbookBean addAccount(PassbookBean bean) {
 		// TODO Auto-generated method stub
-		return dao.createAccount(bean);
+		return dao.addAccount(bean);
 	}
 
 
@@ -32,5 +34,49 @@ public class PassbookServiceImpl implements IPassbookService {
 		return dao.updatePassbook(bean);
 	}
 
+
+	
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * @Override public List<PassbookBean> findAllDetails() { // TODO Auto-generated
+ * method stub return dao.findAllDetails(); }
+ */
