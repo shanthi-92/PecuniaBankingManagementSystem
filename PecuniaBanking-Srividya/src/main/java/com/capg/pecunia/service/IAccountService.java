@@ -6,12 +6,15 @@ import com.capg.pecunia.entity.AccountBean;
 
 public interface IAccountService  {
 	
-AccountBean findById(long accNumber);
+	public AccountBean addAccount(AccountBean bean);
 	
-	AccountBean update(AccountBean bean); 
+	public AccountBean findById(long accNumber);
 	
-	void delete(long accNumber);
+	public AccountBean updateAccount(AccountBean bean,long accNumber); 
+	
+	public void deleteAccount(long accNumber);
 
+    public List<AccountBean> viewAll();
 	
-     
+
 }
