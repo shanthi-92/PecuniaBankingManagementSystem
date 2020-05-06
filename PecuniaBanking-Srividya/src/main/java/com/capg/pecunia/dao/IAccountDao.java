@@ -5,8 +5,20 @@ import java.util.List;
 import com.capg.pecunia.entity.AccountBean;
 
 public interface IAccountDao {
-	AccountBean findById(long accNumber);
-	AccountBean update( AccountBean bean); 
-	void delete(long accNumber);
+	
+	
+	  public AccountBean addAccount(AccountBean bean);
+	  
+	  public AccountBean findById(long accNumber);
+	  
+	  public AccountBean updateAccount(AccountBean bean, long accNumber);
+	  
+	  public void deleteAccount(long accNumber);
+	  
+	  public List<AccountBean> viewAll();
+
+	
+	 
 	 
 }
+

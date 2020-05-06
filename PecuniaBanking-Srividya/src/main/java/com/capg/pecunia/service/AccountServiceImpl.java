@@ -1,5 +1,6 @@
 package com.capg.pecunia.service;
 
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +15,30 @@ public class AccountServiceImpl implements IAccountService {
 	 @Autowired
 	 IAccountDao accountDao;
 	
-	
-	 public AccountBean findById(long accNumber) {
+	 @Override
+		public AccountBean addAccount(AccountBean bean) {
+			
+			return accountDao.addAccount(bean);
+		}
+	 
+	   @Override
+	   public AccountBean findById(long accNumber) {
 			return accountDao.findById(accNumber);
 		}
 	 
-		public AccountBean update(AccountBean bean) {
-			return accountDao.update(bean);
+	    @Override
+		public AccountBean updateAccount(AccountBean bean, long accNumber) {
+			return accountDao.updateAccount(bean, accNumber);
 		}
-	
-		public void delete(long accNumber) {
-			accountDao.delete(accNumber);
+	 
+	    @Override
+		public void deleteAccount(long accNumber) {
+			accountDao.deleteAccount(accNumber);
+		}
+
+		@Override
+		public List<AccountBean> viewAll() {
+			 
+			return accountDao.viewAll();
 		}
 }

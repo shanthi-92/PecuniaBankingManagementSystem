@@ -1,6 +1,8 @@
 package com.capg.pecunia.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Table;
 import javax.persistence.Id;
 
@@ -10,6 +12,7 @@ import javax.persistence.Id;
 public class AccountBean {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private Long accNumber;	
 	//insert into PECUNIA_BANK_MANAGEMENT values(9177894094,'savings',5000.00,'warangal','india','18-4-87','abcdd','srividya',8008709826,506002,'telangana')
 	
